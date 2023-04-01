@@ -1,20 +1,17 @@
-n = int(input())
-
-f = []
-for i in range(n):
+a = int(input())
+b = []
+for i in range(a):
     x, d = map(int, input().split())
-    f.append((x, d, i))
-
-f.sort()
-ans = [0] * n
-st = ([], [])
-for x, d, i in f:
-    s = st[x%2]
+    b.append((x, d, i))
+b.sort()
+c = [0] * a
+y = ([], [])
+for x, d, i in b:
+    s = y[x%2]
     if d == -1:
         if s:
             j, xj = s.pop()
-            ans[i] = ans[j] = (x - xj) // 2
+            c[i] = c[j] = (x - xj) // 2
     else:
         s.append((i, x))
-
-for t in ans: print(t)
+for t in c: print(t)

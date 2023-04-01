@@ -1,6 +1,5 @@
 m, d = map(int, input().split())
 a, b = map(int, input().split())
-
 if a == b:
     print(0)
 elif a == 0 or b == 0:

@@ -1,23 +1,22 @@
 from bisect import *
 import sys
 input = sys.stdin.readline
-
-n = int(input())
+b = int(input())
 a = list(map(int, input().split()))
 
 pos = {}
-for i in range(n): 
+for i in range(b): 
 	if a[i] not in pos: pos[a[i]] = []
 	pos[a[i]].append(i)
 
 for x in sorted(pos.keys()):
-	ans = 0
+	z = 0
 	p = pos[x]
 	
 	xs = list(2*i-p[i] for i in range(len(p)))
 	xs.sort()
 	
-	f = [n] * len(xs)
+	f = [b] * len(xs)
 	
 	'''
 	fix j:
@@ -40,6 +39,6 @@ for x in sorted(pos.keys()):
 			i = min(i, f[v])
 			v = (v & (v + 1)) - 1
 		
-		ans = max(ans, min(n, (j - i + 1) * 2 - 1))
+		z = max(z, min(b, (j - i + 1) * 2 - 1))
 	
-	print(x, ans)
+	print(x, z)
