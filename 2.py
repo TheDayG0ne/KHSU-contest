@@ -1,19 +1,16 @@
-def count_possible_cells(a, b, c):
-    count = 0
-    for x in a:
-        if x % 2 == 1:
-            for y in b:
-                if y % 2 == 1:
-                    for z in c:
-                        if z % 2 == 1 and x * y * z % 3 == 0:
-                            count += 1
-    return count
+import itertools
  
-n1, *a = map(int, input().split())
-n2, *b = map(int, input().split())
-n3, *c = map(int, input().split())
+def count_possible_cells(l1, l2, l3):
+    lengths = [l1, l2, l3]
+    combs = list(itertools.product(*lengths))
  
-if n1 % 3 == 0 and n2 % 3 == 0 and n3 % 3 == 0:
-    print(count_possible_cells(a, b, c))
-else:
-    print(0)
+    combs = filter(lambda x: x[0] % 2 == x[1] % 2 == x[2] % 2 == 1, combs)
+    combs = filter(lambda x: x[0] * x[1] * x[2] % 3 == 0, combs)
+ 
+    return len(list(combs))
+ 
+l1 = list(map(int, input().split()))[1:]
+l2 = list(map(int, input().split()))[1:]
+l3 = list(map(int, input().split()))[1:]
+
+print(count_possible_cells(l1, l2, l3))
