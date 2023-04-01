@@ -11,15 +11,15 @@ auto operator<<(ostream&o,auto&&t)->decltype(o<<get<0>(t)){int f=0,u=&o!=&cerr;o
 	#define rr(...) ;
 	#define endl '\n'
 #endif
-#define bb(c) begin(c), end(c)
-#define ff(T, name, args...) function<T(args)> name = [&](args)->T
-#define jj(v...) v; [](auto&...x){(cin>>...>>x);}(v);
-#define ii(v...) int jj(v)
+#define p2(c) begin(c), end(c)
+#define f1(T, name, args...) function<T(args)> name = [&](args)->T
+#define p1(v...) v; [](auto&...x){(cin>>...>>x);}(v);
+#define pt1(v...) int p1(v)
 using ll = long long;
 
 
 void run_case(const size_t ____case) { // rr(____case)
-	ii(n)
+	pt1(n)
 	vector<int> a(n);
 	for(auto &it : a) cin >> it;
 	vector<int> b(n);
@@ -30,7 +30,7 @@ void run_case(const size_t ____case) { // rr(____case)
 		nx[a[i]] = {b[i], i};
 	}
 	
-	vector<int> ans, u(n+1);
+	vector<int> out1, u(n+1);
 	int cn = 0;
 	for(int i=1; i<=n; ++i) if(!u[i]) {
 	    ++cn;
@@ -41,12 +41,12 @@ void run_case(const size_t ____case) { // rr(____case)
 			x = nx[x].first;
 			if(u[x]) break;
 		}
-		for(int k=0; k<size(cur); k+=2) ans.push_back(cur[k] + 1);
+		for(int k=0; k<size(cur); k+=2) out1.push_back(cur[k] + 1);
 	}
 	cerr << "cycs: " << cn << endl;
 	
-	cout << size(ans) << endl;
-	cout << ans << endl;
+	cout << size(out1) << endl;
+	cout << out1 << endl;
 	
 }
 
