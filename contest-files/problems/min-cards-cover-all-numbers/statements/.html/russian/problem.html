@@ -1,0 +1,31 @@
+<HTML><HEAD><META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <META content="no-cache" http-equiv="pragma">
+    <META content="-1" http-equiv="expires">
+    <META content="text/html;charset=UTF-8" http-equiv="content-type">
+    <LINK href="problem-statement.css" rel="stylesheet" type="text/css">
+    <TITLE>Двухсторонние карточки</TITLE>
+    <SCRIPT type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          tex2jax: {inlineMath: [['$$$','$$$']], displayMath: [['$$$$$$','$$$$$$']]}
+        });
+        </SCRIPT>
+        <SCRIPT async="" src="https://polygon.codeforces.com/lib/MathJax/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript">
+    </SCRIPT>
+</HEAD><BODY>
+    <DIV class="problem-statement"><DIV class="header"><DIV class="title">Двухсторонние карточки</DIV><DIV class="time-limit"><DIV class="property-title">ограничение по времени на тест</DIV>1 секунда</DIV><DIV class="memory-limit"><DIV class="property-title">ограничение по памяти на тест</DIV>256 мегабайт</DIV><DIV class="input-file"><DIV class="property-title">ввод</DIV>стандартный ввод</DIV><DIV class="output-file"><DIV class="property-title">вывод</DIV>стандартный вывод</DIV></DIV><DIV class="legend"><P>Есть $$$n$$$ карточек, на каждой написано по два числа&nbsp;&mdash; на лицевой стороне $$$i$$$-й карточки написано число $$$a_i$$$, а на оборотной &nbsp;&mdash; $$$b_i$$$.</P><P>Все числа с лицевых сторон образуют перестановку размера $$$n$$$, то есть каждое число от $$$1$$$ до $$$n$$$ встречается ровно один раз.</P><P>То же самое выполняется и для чисел с оборотных сторон.</P><P>Возьмите минимальное количество карточек так, чтобы каждое число от $$$1$$$ до $$$n$$$ встречалось хотя бы раз среди выбранных карточек, неважно на какой из сторон.</P></DIV><P></P><P></P><DIV class="input-specification"><DIV class="section-title">Входные данные</DIV><P></P><P>Первая строка содержит целое число $$$n$$$&nbsp;&mdash; количество карточек ($$$1 \leq n \leq 100\,000$$$).</P><P>Вторая строка содержит $$$n$$$ целых чисел $$$a_i$$$, разделённых пробелом.</P><P>Третья строка содержит $$$n$$$ целых чисел $$$b_i$$$, разделённых пробелом.</P></DIV><P></P><P></P><DIV class="output-specification"><DIV class="section-title">Выходные данные</DIV><P></P><P>В первую строку выведите $$$m$$$&nbsp;&mdash; количество взятых карточек.</P><P>Во второй строке выведите $$$m$$$ целых чисел&nbsp;&mdash; номера взятых карточек, в любом порядке.</P><P>Карточки пронумерованы от $$$1$$$ до $$$n$$$.</P></DIV><P></P><P></P><DIV class="sample-tests"><DIV class="section-title">Примеры</DIV><P></P><P></P><DIV class="sample-test"><DIV class="input"><DIV class="title">Входные данные</DIV><PRE class="content">
+6
+1 2 3 4 5 6
+3 2 1 5 6 4
+</PRE></DIV><DIV class="output"><DIV class="title">Выходные данные</DIV><PRE class="content">
+4
+1 2 5 6
+</PRE></DIV><DIV class="input"><DIV class="title">Входные данные</DIV><PRE class="content">
+3
+1 2 3
+1 2 3
+</PRE></DIV><DIV class="output"><DIV class="title">Выходные данные</DIV><PRE class="content">
+3
+1 2 3
+</PRE></DIV></DIV></DIV></DIV><P></P><P>  </P>
+
+</BODY></HTML>

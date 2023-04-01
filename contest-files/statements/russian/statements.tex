@@ -1,0 +1,52 @@
+\documentclass [11pt, a4paper, oneside] {article}
+
+\usepackage [T2A] {fontenc}
+\usepackage [utf8] {inputenc}
+\usepackage [english, russian] {babel}
+\usepackage {amsmath}
+\usepackage {amssymb}
+\usepackage [russian]{olymp}
+\usepackage {comment}
+\usepackage {epigraph}
+\usepackage {expdlist}
+\usepackage {graphicx}
+\usepackage {multirow}
+\usepackage {siunitx}
+\usepackage {ulem}
+%\usepackage {hyperref}
+\usepackage {import}
+\usepackage {ifpdf}
+\ifpdf
+  \DeclareGraphicsRule{*}{mps}{*}{}
+\fi
+
+\begin {document}
+
+\contest
+{KHSU 2023}%
+{}%
+{}%
+
+\binoppenalty=10000
+\relpenalty=10000
+
+\renewcommand{\t}{\texttt}
+
+
+\graphicspath{{../../problems/make-numbers-equal-by-mul-div/statements/russian/}}
+  \def\ProblemIndex{A}
+\import{../../problems/make-numbers-equal-by-mul-div/statements/russian/}{./problem.tex}
+\graphicspath{{../../problems/make-box-from-3-arrays/statements/russian/}}
+  \def\ProblemIndex{B}
+\import{../../problems/make-box-from-3-arrays/statements/russian/}{./problem.tex}
+\graphicspath{{../../problems/annihilating-left-right-jumps/statements/russian/}}
+  \def\ProblemIndex{C}
+\import{../../problems/annihilating-left-right-jumps/statements/russian/}{./problem.tex}
+\graphicspath{{../../problems/min-cards-cover-all-numbers/statements/russian/}}
+  \def\ProblemIndex{D}
+\import{../../problems/min-cards-cover-all-numbers/statements/russian/}{./problem.tex}
+\graphicspath{{../../problems/best-majority-segment-for-each/statements/russian/}}
+  \def\ProblemIndex{E}
+\import{../../problems/best-majority-segment-for-each/statements/russian/}{./problem.tex}
+
+\end {document}

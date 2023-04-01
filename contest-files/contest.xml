@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<contest url="https://polygon.codeforces.com/c/32889">
+    <names>
+        <name language="russian" value="KHSU 2023"/>
+    </names>
+    <statements>
+        <statement language="russian" type="application/pdf" url="https://polygon.codeforces.com/c/32889/russian/statements.pdf"/>
+    </statements>
+    <problems>
+        <problem index="a" url="https://polygon.codeforces.com/p0A7DoZ/demidenko/make-numbers-equal-by-mul-div"/>
+        <problem index="b" url="https://polygon.codeforces.com/p4OORZE/demidenko/make-box-from-3-arrays"/>
+        <problem index="c" url="https://polygon.codeforces.com/p69Fdf7/demidenko/annihilating-left-right-jumps"/>
+        <problem index="d" url="https://polygon.codeforces.com/p0w5cuM/demidenko/min-cards-cover-all-numbers"/>
+        <problem index="e" url="https://polygon.codeforces.com/p2UibL2/demidenko/best-majority-segment-for-each"/>
+    </problems>
+</contest>

@@ -1,0 +1,31 @@
+<HTML><HEAD><META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <META content="no-cache" http-equiv="pragma">
+    <META content="-1" http-equiv="expires">
+    <META content="text/html;charset=UTF-8" http-equiv="content-type">
+    <LINK href="problem-statement.css" rel="stylesheet" type="text/css">
+    <TITLE>Плейлист</TITLE>
+    <SCRIPT type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          tex2jax: {inlineMath: [['$$$','$$$']], displayMath: [['$$$$$$','$$$$$$']]}
+        });
+        </SCRIPT>
+        <SCRIPT async="" src="https://polygon.codeforces.com/lib/MathJax/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript">
+    </SCRIPT>
+</HEAD><BODY>
+    <DIV class="problem-statement"><DIV class="header"><DIV class="title">Плейлист</DIV><DIV class="time-limit"><DIV class="property-title">ограничение по времени на тест</DIV>2 секунды</DIV><DIV class="memory-limit"><DIV class="property-title">ограничение по памяти на тест</DIV>256 мегабайт</DIV><DIV class="input-file"><DIV class="property-title">ввод</DIV>стандартный ввод</DIV><DIV class="output-file"><DIV class="property-title">вывод</DIV>стандартный вывод</DIV></DIV><DIV class="legend"><P>У Вани есть плейлист из его любимых песен. Жанр $$$i$$$-й песни обозначается целым числом $$$a_i$$$.</P><P>Жанр считается подавляющим, если песен этого жанра строго больше, чем песен других жанров. Например, в последовательности $$$[1, 2, 3, 2, 2]$$$ жанр с номером $$$2$$$ является подавляющим, а в последовательности $$$[1, 2, 3, 3]$$$ ни один жанр таковым не является.</P><P>Ваня хотел бы узнать для каждого жанра наибольший по длине отрезок, на котором этот жанр является подавляющим. </P></DIV><P></P><P></P><DIV class="input-specification"><DIV class="section-title">Входные данные</DIV><P></P><P>Первая строка содержит целое число $$$n$$$&nbsp;&mdash; количество песен в плейлисте ($$$1 \leq n \leq 200\,000$$$).</P><P>Вторая строка содержит $$$n$$$ целых чисел $$$a_i$$$, разделённых пробелом ($$$1 \leq a_i \leq 10^9$$$).</P></DIV><P></P><P></P><DIV class="output-specification"><DIV class="section-title">Выходные данные</DIV><P></P><P>Для каждого жанра выведите в отдельной строке два числа: номер, задающий этот жанр, и наибольшую длину отрезка, на котором он является подавляющим.</P><P>Пары следует вывести в порядке возрастания чисел, обозначающих жанры.</P></DIV><P></P><P></P><DIV class="sample-tests"><DIV class="section-title">Примеры</DIV><P></P><P></P><DIV class="sample-test"><DIV class="input"><DIV class="title">Входные данные</DIV><PRE class="content">
+7
+1 2 2 3 2 3 1
+</PRE></DIV><DIV class="output"><DIV class="title">Выходные данные</DIV><PRE class="content">
+1 1
+2 5
+3 3
+</PRE></DIV><DIV class="input"><DIV class="title">Входные данные</DIV><PRE class="content">
+3
+333 1 1000000000
+</PRE></DIV><DIV class="output"><DIV class="title">Выходные данные</DIV><PRE class="content">
+1 1
+333 1
+1000000000 1
+</PRE></DIV></DIV></DIV></DIV><P></P><P>  </P>
+
+</BODY></HTML>

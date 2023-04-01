@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<problem revision="2" short-name="make-numbers-equal-by-mul-div" url="https://polygon.codeforces.com/p0A7DoZ/demidenko/make-numbers-equal-by-mul-div">
+    <names>
+        <name language="russian" value="Два заклинания"/>
+    </names>
+    <statements>
+        <statement charset="UTF-8" language="russian" mathjax="true" path="statements/russian/problem.tex" type="application/x-tex"/>
+        <statement charset="UTF-8" language="russian" mathjax="true" path="statements/.html/russian/problem.html" type="text/html"/>
+        <statement language="russian" path="statements/.pdf/russian/problem.pdf" type="application/pdf"/>
+    </statements>
+    <judging cpu-name="Intel(R) Core(TM) i3-8100 CPU @ 3.60GHz" cpu-speed="3600" input-file="" output-file="" run-count="1">
+        <testset name="tests">
+            <time-limit>1000</time-limit>
+            <memory-limit>268435456</memory-limit>
+            <test-count>21</test-count>
+            <input-path-pattern>tests/%02d</input-path-pattern>
+            <answer-path-pattern>tests/%02d.a</answer-path-pattern>
+            <tests>
+                <test method="manual" sample="true"/>
+                <test method="manual" sample="true"/>
+                <test cmd="gen -t=0 -cmp=0" method="generated"/>
+                <test cmd="gen -t=0 -cmp=-1" method="generated"/>
+                <test cmd="gen -t=0 -cmp=1" method="generated"/>
+                <test cmd="gen -t=1 -cmp=0" method="generated"/>
+                <test cmd="gen -t=1 -cmp=-1" method="generated"/>
+                <test cmd="gen -t=1 -cmp=1" method="generated"/>
+                <test cmd="gen -t=2 -cmp=0" method="generated"/>
+                <test cmd="gen -t=2 -cmp=-1" method="generated"/>
+                <test cmd="gen -t=2 -cmp=1" method="generated"/>
+                <test cmd="gen -t=3 -cmp=0" method="generated"/>
+                <test cmd="gen -t=3 -cmp=-1" method="generated"/>
+                <test cmd="gen -t=3 -cmp=1" method="generated"/>
+                <test cmd="gen -t=4 -cmp=0" method="generated"/>
+                <test cmd="gen -t=4 -cmp=-1" method="generated"/>
+                <test cmd="gen -t=4 -cmp=1" method="generated"/>
+                <test cmd="gen -t=5 -cmp=0" method="generated"/>
+                <test cmd="gen -t=5 -cmp=-1" method="generated"/>
+                <test cmd="gen -t=5 -cmp=1" method="generated"/>
+                <test method="manual"/>
+            </tests>
+        </testset>
+    </judging>
+    <files>
+        <resources>
+            <file path="files/olymp.sty"/>
+            <file path="files/problem.tex"/>
+            <file path="files/statements.ftl"/>
+            <file path="files/testlib.h" type="h.g++"/>
+        </resources>
+        <executables>
+            <executable>
+                <source path="files/gen.cpp" type="cpp.g++17"/>
+                <binary path="files/gen.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/validator.cpp" type="cpp.g++17"/>
+                <binary path="files/validator.exe" type="exe.win32"/>
+            </executable>
+        </executables>
+    </files>
+    <assets>
+        <checker name="std::hcmp.cpp" type="testlib">
+            <source path="files/check.cpp" type="cpp.g++17"/>
+            <binary path="check.exe" type="exe.win32"/>
+            <copy path="check.cpp"/>
+            <testset>
+                <test-count>0</test-count>
+                <input-path-pattern>files/tests/checker-tests/%02d</input-path-pattern>
+                <output-path-pattern>files/tests/checker-tests/%02d.o</output-path-pattern>
+                <answer-path-pattern>files/tests/checker-tests/%02d.a</answer-path-pattern>
+                <tests/>
+            </testset>
+        </checker>
+        <validators>
+            <validator>
+                <source path="files/validator.cpp" type="cpp.g++17"/>
+                <binary path="files/validator.exe" type="exe.win32"/>
+                <testset>
+                    <test-count>0</test-count>
+                    <input-path-pattern>files/tests/validator-tests/%02d</input-path-pattern>
+                    <tests/>
+                </testset>
+            </validator>
+        </validators>
+        <solutions>
+            <solution tag="main">
+                <source path="solutions/solution.cpp" type="cpp.g++17"/>
+                <binary path="solutions/solution.pys3" type="pythonx.3"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/solution.kt" type="kotlin17"/>
+                <binary path="solutions/solution.pys3" type="pythonx.3"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/solution.py" type="python.3"/>
+                <binary path="solutions/solution.pys3" type="pythonx.3"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/solution_wrong.cpp" type="cpp.g++17"/>
+                <binary path="solutions/solution_wrong.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/solution_wrong2.cpp" type="cpp.g++17"/>
+                <binary path="solutions/solution_wrong2.exe" type="exe.win32"/>
+            </solution>
+        </solutions>
+    </assets>
+    <properties>
+        <property name="tests-wellformed" value="true"/>
+    </properties>
+    <stresses>
+        <stress-count>0</stress-count>
+        <stress-path-pattern>stresses/%03d</stress-path-pattern>
+        <list/>
+    </stresses>
+</problem>

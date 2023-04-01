@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<problem revision="2" short-name="min-cards-cover-all-numbers" url="https://polygon.codeforces.com/p0w5cuM/demidenko/min-cards-cover-all-numbers">
+    <names>
+        <name language="russian" value="Двухсторонние карточки"/>
+    </names>
+    <statements>
+        <statement charset="UTF-8" language="russian" mathjax="true" path="statements/russian/problem.tex" type="application/x-tex"/>
+        <statement charset="UTF-8" language="russian" mathjax="true" path="statements/.html/russian/problem.html" type="text/html"/>
+        <statement language="russian" path="statements/.pdf/russian/problem.pdf" type="application/pdf"/>
+    </statements>
+    <judging cpu-name="Intel(R) Core(TM) i3-8100 CPU @ 3.60GHz" cpu-speed="3600" input-file="" output-file="" run-count="1">
+        <testset name="tests">
+            <time-limit>1000</time-limit>
+            <memory-limit>268435456</memory-limit>
+            <test-count>20</test-count>
+            <input-path-pattern>tests/%02d</input-path-pattern>
+            <answer-path-pattern>tests/%02d.a</answer-path-pattern>
+            <tests>
+                <test method="manual" sample="true"/>
+                <test method="manual" sample="true"/>
+                <test method="manual"/>
+                <test cmd="gen -n=1000 -t=rand -d=100" method="generated"/>
+                <test cmd="gen -n=1000 -t=rand -d=5" method="generated"/>
+                <test cmd="gen -n=100000 -t=rand -d=0 1" method="generated"/>
+                <test cmd="gen -n=100000 -t=rand -d=0 2" method="generated"/>
+                <test cmd="gen -n=100000 -t=rand -d=0 3" method="generated"/>
+                <test cmd="gen -n=100000 -t=rand -d=0 4" method="generated"/>
+                <test cmd="gen -n=100000 -t=rand -d=0 5" method="generated"/>
+                <test cmd="gen -n=100000 -t=rand -d=1" method="generated"/>
+                <test cmd="gen -n=100000 -t=rand -d=2" method="generated"/>
+                <test cmd="gen -n=100000 -t=rand -d=3" method="generated"/>
+                <test cmd="gen -n=100000 -t=rand -d=333" method="generated"/>
+                <test cmd="gen -n=100000 -t=rand -d=10000" method="generated"/>
+                <test cmd="gen -n=100000 -t=rand -d=20000" method="generated"/>
+                <test cmd="gen -n=100000 -t=rand -d=25000" method="generated"/>
+                <test cmd="gen -n=100000 -t=rand -d=50000" method="generated"/>
+                <test cmd="gen -n=100000 -t=rand -d=100000" method="generated"/>
+                <test cmd="gen -n=100000 -t=rand -d=99900" method="generated"/>
+            </tests>
+        </testset>
+    </judging>
+    <files>
+        <resources>
+            <file path="files/olymp.sty"/>
+            <file path="files/problem.tex"/>
+            <file path="files/statements.ftl"/>
+            <file path="files/testlib.h" type="h.g++"/>
+        </resources>
+        <executables>
+            <executable>
+                <source path="files/checker.cpp" type="cpp.g++17"/>
+                <binary path="files/checker.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/gen.cpp" type="cpp.g++17"/>
+                <binary path="files/gen.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/validator.cpp" type="cpp.g++17"/>
+                <binary path="files/validator.exe" type="exe.win32"/>
+            </executable>
+        </executables>
+    </files>
+    <assets>
+        <checker type="testlib">
+            <source path="files/checker.cpp" type="cpp.g++17"/>
+            <binary path="check.exe" type="exe.win32"/>
+            <copy path="check.cpp" type="cpp.g++17"/>
+            <testset>
+                <test-count>5</test-count>
+                <input-path-pattern>files/tests/checker-tests/%02d</input-path-pattern>
+                <output-path-pattern>files/tests/checker-tests/%02d.o</output-path-pattern>
+                <answer-path-pattern>files/tests/checker-tests/%02d.a</answer-path-pattern>
+                <tests>
+                    <test verdict="ok"/>
+                    <test verdict="wrong-answer"/>
+                    <test verdict="ok"/>
+                    <test verdict="wrong-answer"/>
+                    <test verdict="wrong-answer"/>
+                </tests>
+            </testset>
+        </checker>
+        <validators>
+            <validator>
+                <source path="files/validator.cpp" type="cpp.g++17"/>
+                <binary path="files/validator.exe" type="exe.win32"/>
+                <testset>
+                    <test-count>0</test-count>
+                    <input-path-pattern>files/tests/validator-tests/%02d</input-path-pattern>
+                    <tests/>
+                </testset>
+            </validator>
+        </validators>
+        <solutions>
+            <solution tag="wrong-answer">
+                <source path="solutions/greedy.cpp" type="cpp.g++17"/>
+                <binary path="solutions/greedy.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="main">
+                <source path="solutions/solution.cpp" type="cpp.g++17"/>
+                <binary path="solutions/solution.pys3" type="pythonx.3"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/solution.py" type="python.3"/>
+                <binary path="solutions/solution.pys3" type="pythonx.3"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/solution_alt.cpp" type="cpp.g++17"/>
+                <binary path="solutions/solution_alt.exe" type="exe.win32"/>
+            </solution>
+        </solutions>
+    </assets>
+    <properties>
+        <property name="tests-wellformed" value="true"/>
+    </properties>
+    <stresses>
+        <stress-count>0</stress-count>
+        <stress-path-pattern>stresses/%03d</stress-path-pattern>
+        <list/>
+    </stresses>
+</problem>

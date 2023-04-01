@@ -1,0 +1,39 @@
+<HTML><HEAD><META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <META content="no-cache" http-equiv="pragma">
+    <META content="-1" http-equiv="expires">
+    <META content="text/html;charset=UTF-8" http-equiv="content-type">
+    <LINK href="problem-statement.css" rel="stylesheet" type="text/css">
+    <TITLE>Лягушки и антилягушки</TITLE>
+    <SCRIPT type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          tex2jax: {inlineMath: [['$$$','$$$']], displayMath: [['$$$$$$','$$$$$$']]}
+        });
+        </SCRIPT>
+        <SCRIPT async="" src="https://polygon.codeforces.com/lib/MathJax/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript">
+    </SCRIPT>
+</HEAD><BODY>
+    <DIV class="problem-statement"><DIV class="header"><DIV class="title">Лягушки и антилягушки</DIV><DIV class="time-limit"><DIV class="property-title">ограничение по времени на тест</DIV>1 секунда</DIV><DIV class="memory-limit"><DIV class="property-title">ограничение по памяти на тест</DIV>256 мегабайт</DIV><DIV class="input-file"><DIV class="property-title">ввод</DIV>стандартный ввод</DIV><DIV class="output-file"><DIV class="property-title">вывод</DIV>стандартный вывод</DIV></DIV><DIV class="legend"><P>На прямой расположено бесконечное количество камней. Каждый камень соответствует целому числу.</P><P>Изначально на этих камнях сидят $$$n$$$ лягушек, а именно $$$i$$$-я лягушка сидит на камне $$$x_i$$$. Известно, что изначально никакие две позиции не совпадают.</P><P>Но не все лягушки одинаковые: некоторые из них антилягушки!</P><P>В начале каждой секунды каждая обычная лягушка прыгает с камня $$$x$$$ на камень $$$x+1$$$, а каждая антилягушка с камня $$$x$$$ на камень $$$x-1$$$ .</P><P>При этом, если две лягушки оказались в начале секунды на одном камне, то они аннигилируют, то есть, исчезают и больше никак не влияют на последующий процесс.</P><P>Заметим, что лягушки прыгают мгновенно, и не находятся ни в каком виде между камнями.</P><P>От Вас требуется определить для каждой лягушки аннигилирует ли она и если да, то через сколько секунд.</P></DIV><P></P><P></P><DIV class="input-specification"><DIV class="section-title">Входные данные</DIV><P></P><P>Первая строка содержит целое число $$$n$$$&nbsp;&mdash; количество лягушек ($$$1 \leq n \leq 100\,000$$$).</P><P>Следующие $$$n$$$ строк содержат пары чисел $$$x_i$$$ и $$$d_i$$$&nbsp;&mdash; начальное положение и тип лягушки ($$$1 \leq x_i \leq 10^9$$$). Обычная лягушка обозначается через $$$d_i = 1$$$, а антилягушка через $$$d_i = -1$$$.</P><P>Гарантируется, что все $$$x_i$$$ различны.</P></DIV><P></P><P></P><DIV class="output-specification"><DIV class="section-title">Выходные данные</DIV><P></P><P>Выведите $$$n$$$ строк: в $$$i$$$-й строке должно содержатся время, через которое $$$i$$$-я лягушка аннигилирует, или $$$0$$$, если этого не произойдёт никогда.</P></DIV><P></P><P></P><DIV class="sample-tests"><DIV class="section-title">Примеры</DIV><P></P><P></P><DIV class="sample-test"><DIV class="input"><DIV class="title">Входные данные</DIV><PRE class="content">
+5
+1 1
+2 1
+5 -1
+6 1
+8 -1
+</PRE></DIV><DIV class="output"><DIV class="title">Выходные данные</DIV><PRE class="content">
+2
+0
+2
+1
+1
+</PRE></DIV><DIV class="input"><DIV class="title">Входные данные</DIV><PRE class="content">
+3
+1 1
+2 1
+3 1
+</PRE></DIV><DIV class="output"><DIV class="title">Выходные данные</DIV><PRE class="content">
+0
+0
+0
+</PRE></DIV></DIV></DIV></DIV><P></P><P>  </P>
+
+</BODY></HTML>

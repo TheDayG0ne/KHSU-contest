@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<problem revision="5" short-name="best-majority-segment-for-each" url="https://polygon.codeforces.com/p2UibL2/demidenko/best-majority-segment-for-each">
+    <names>
+        <name language="russian" value="Плейлист"/>
+    </names>
+    <statements>
+        <statement charset="UTF-8" language="russian" mathjax="true" path="statements/russian/problem.tex" type="application/x-tex"/>
+        <statement charset="UTF-8" language="russian" mathjax="true" path="statements/.html/russian/problem.html" type="text/html"/>
+        <statement language="russian" path="statements/.pdf/russian/problem.pdf" type="application/pdf"/>
+    </statements>
+    <judging cpu-name="Intel(R) Core(TM) i3-8100 CPU @ 3.60GHz" cpu-speed="3600" input-file="" output-file="" run-count="1">
+        <testset name="tests">
+            <time-limit>2000</time-limit>
+            <memory-limit>268435456</memory-limit>
+            <test-count>39</test-count>
+            <input-path-pattern>tests/%02d</input-path-pattern>
+            <answer-path-pattern>tests/%02d.a</answer-path-pattern>
+            <tests>
+                <test method="manual" sample="true"/>
+                <test method="manual" sample="true"/>
+                <test method="manual"/>
+                <test cmd="gen -n=3000 -t=rand -d=2" method="generated"/>
+                <test cmd="gen -n=3000 -t=rand -d=3" method="generated"/>
+                <test cmd="gen -n=3000 -t=rand -d=5" method="generated"/>
+                <test cmd="gen -n=3000 -t=rand2 4" method="generated"/>
+                <test cmd="gen -n=3000 -t=rand2 5" method="generated"/>
+                <test cmd="gen -n=3000 -t=rand2 6" method="generated"/>
+                <test cmd="gen -n=200000 -t=rand -d=2 1" method="generated"/>
+                <test cmd="gen -n=200000 -t=rand -d=2 2" method="generated"/>
+                <test cmd="gen -n=200000 -t=rand -d=2 3" method="generated"/>
+                <test cmd="gen -n=200000 -t=rand -d=2 4" method="generated"/>
+                <test cmd="gen -n=200000 -t=rand -d=2 5" method="generated"/>
+                <test cmd="gen -n=200000 -t=rand -d=2 6" method="generated"/>
+                <test cmd="gen -n=200000 -t=rand -d=2 7" method="generated"/>
+                <test cmd="gen -n=200000 -t=rand -d=2 8" method="generated"/>
+                <test cmd="gen -n=200000 -t=rand -d=2 9" method="generated"/>
+                <test cmd="gen -n=200000 -t=rand -d=2 10" method="generated"/>
+                <test cmd="gen -n=200000 -t=rand -d=3" method="generated"/>
+                <test cmd="gen -n=200000 -t=rand -d=4" method="generated"/>
+                <test cmd="gen -n=200000 -t=rand -d=5" method="generated"/>
+                <test cmd="gen -n=200000 -t=rand -d=10" method="generated"/>
+                <test cmd="gen -n=200000 -t=rand -d=16" method="generated"/>
+                <test cmd="gen -n=200000 -t=rand -d=50" method="generated"/>
+                <test cmd="gen -n=200000 -t=rand -d=40000" method="generated"/>
+                <test cmd="gen -n=200000 -t=rand -d=200000" method="generated"/>
+                <test cmd="gen -n=200000 -t=rand2 1" method="generated"/>
+                <test cmd="gen -n=200000 -t=rand2 2" method="generated"/>
+                <test cmd="gen -n=200000 -t=rand2 3" method="generated"/>
+                <test cmd="gen -n=200000 -t=rand2 4" method="generated"/>
+                <test cmd="gen -n=200000 -t=rand2 5" method="generated"/>
+                <test cmd="gen -n=200000 -t=rand2 6" method="generated"/>
+                <test cmd="gen -n=200000 -t=rand2 7" method="generated"/>
+                <test cmd="gen -n=200000 -t=rand2 8" method="generated"/>
+                <test cmd="gen -n=200000 -t=rand2 9" method="generated"/>
+                <test cmd="gen -n=200000 -t=rand2 10" method="generated"/>
+                <test cmd="gen -n=200000 -t=dx" method="generated"/>
+                <test cmd="gen -n=200000 -t=spec1" method="generated"/>
+            </tests>
+        </testset>
+    </judging>
+    <files>
+        <resources>
+            <file path="files/olymp.sty"/>
+            <file path="files/problem.tex"/>
+            <file path="files/statements.ftl"/>
+            <file path="files/testlib.h" type="h.g++"/>
+        </resources>
+        <executables>
+            <executable>
+                <source path="files/gen.cpp" type="cpp.g++17"/>
+                <binary path="files/gen.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/validator.cpp" type="cpp.g++17"/>
+                <binary path="files/validator.exe" type="exe.win32"/>
+            </executable>
+        </executables>
+    </files>
+    <assets>
+        <checker name="std::ncmp.cpp" type="testlib">
+            <source path="files/check.cpp" type="cpp.g++17"/>
+            <binary path="check.exe" type="exe.win32"/>
+            <copy path="check.cpp"/>
+            <testset>
+                <test-count>0</test-count>
+                <input-path-pattern>files/tests/checker-tests/%02d</input-path-pattern>
+                <output-path-pattern>files/tests/checker-tests/%02d.o</output-path-pattern>
+                <answer-path-pattern>files/tests/checker-tests/%02d.a</answer-path-pattern>
+                <tests/>
+            </testset>
+        </checker>
+        <validators>
+            <validator>
+                <source path="files/validator.cpp" type="cpp.g++17"/>
+                <binary path="files/validator.exe" type="exe.win32"/>
+                <testset>
+                    <test-count>0</test-count>
+                    <input-path-pattern>files/tests/validator-tests/%02d</input-path-pattern>
+                    <tests/>
+                </testset>
+            </validator>
+        </validators>
+        <solutions>
+            <solution tag="wrong-answer">
+                <source path="solutions/bad_bs.cpp" type="cpp.g++17"/>
+                <binary path="solutions/bad_bs.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/bad_greedy.cpp" type="cpp.g++17"/>
+                <binary path="solutions/bad_greedy.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="wrong-answer">
+                <source path="solutions/bad_tricky.cpp" type="cpp.g++17"/>
+                <binary path="solutions/bad_tricky.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="time-limit-exceeded">
+                <source path="solutions/brute.cpp" type="cpp.g++17"/>
+                <binary path="solutions/brute.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/brute_wrong.cpp" type="cpp.g++17"/>
+                <binary path="solutions/brute_wrong.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="main">
+                <source path="solutions/solution.cpp" type="cpp.g++17"/>
+                <binary path="solutions/solution.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/solution_fent.py" type="python.pypy3"/>
+                <binary path="solutions/solution_fent.pypys3" type="pythonx.pypy3"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/solution_rmq.cpp" type="cpp.g++17"/>
+                <binary path="solutions/solution_rmq.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="time-limit-exceeded">
+                <source path="solutions/solution_slow.cpp" type="cpp.g++17"/>
+                <binary path="solutions/solution_slow.exe" type="exe.win32"/>
+            </solution>
+        </solutions>
+    </assets>
+    <properties>
+        <property name="tests-wellformed" value="true"/>
+    </properties>
+    <stresses>
+        <stress-count>0</stress-count>
+        <stress-path-pattern>stresses/%03d</stress-path-pattern>
+        <list/>
+    </stresses>
+</problem>
