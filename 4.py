@@ -1,15 +1,15 @@
 n = int(input())
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
-
 id = [0] * (n + 1)
 nx = [0] * (n + 1)
 for i in range(n): 
     id[a[i]] = i + 1
     nx[a[i]] = b[i]
-
+    
 ans = []
 used = [False] * (n+1)
+
 for i in range(1, n+1): 
     if used[i]: continue
     cur = []
